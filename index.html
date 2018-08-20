@@ -1,47 +1,57 @@
-<table border>
-<tr>
-	<th rowspan=4>上海</th><!--rowspan=3，跨三行表元-->
-	<th>线路</th> 
-	<th>类别</th>
-	<th>负责人</th>
-	<th>状态</th>
-	<th>目前进度</th>
-	<th>对方厂家</th>
-	<th>开始时间</th>
-	<th>结束时间</th>
-	<th>说明</th>
-</tr>
-<tr style="background-color:red">
-	<th>2号线东延线</th> 
-	<td>ATS接口</td>
-	<td style="text-align:center">李辉</td>
-	<td style="text-align:center">开发</td>
-	<td style="text-align:center">0%</td>
-	<td style="text-align:center">PA</td>
-	<td style="text-align:center">2018-8-20</td>
-	<td style="text-align:center">2018-9-31</td>
-	<td style="text-align:left">抓取网卡数据给高架站发送ATS,并在LED上显示出来</td>
-</tr>
-<tr style="background-color:red">
-	<th>松江有轨电车</th> 
-	<td>ATS接口</td>
-	<td style="text-align:center">蔡诚</td>
-	<td style="text-align:center">开发</td>
-	<td style="text-align:center">10%</td>
-	<td style="text-align:center">信号</td>
-	<td style="text-align:center">2018-8-16</td>
-	<td style="text-align:center">2018-8-24</td>
-	<td style="text-align:left">WebService获取信号并下发</td>
-</tr>
-<tr style="background-color:#FF9797">
-	<th>5号线</th> 
-	<td>SIOS接口</td>
-	<td style="text-align:center">蔡诚</td>
-	<td style="text-align:center">开发</td>
-	<td style="text-align:center">70%</td>
-	<td style="text-align:center">ISCS</td>
-	<td style="text-align:center">2018-4-23</td>
-	<td style="text-align:center"></td>
-	<td style="text-align:left">协议已定,开发完成(2018-4-23),待测试</td>
-</tr>
-</table>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //检查用户名和密码是否为空
+        function check(){
+            var username= document.getElementById("username");
+            if(username.value.trim()==""){//没有输入用户名是显示提示
+                //获取所有子节点
+                var findNodes = document.getElementById("name").children;
+                if(findNodes.length==0){//只添加一次span
+                    var appdom= document.createElement("span");
+                    appdom.innerHTML="*用户名不能为空";
+                    appdom.style.color="red";
+                    document.getElementById("name").appendChild(appdom);
+                }
+                return false;
+            }else{//输入了内容后清除节点内容
+                var findNodes =document.getElementById("name").children;
+                if(findNodes.length>0){
+                    document.getElementById("name").removeChild(findNodes[0]);
+                }
+            }
+            var userpwd = document.getElementById("userpwd");
+            if(userpwd.value.trim()==""){
+                var findNodes2 = document.getElementById("pwd").children;
+                if(findNodes2.length==0){
+                    var appdom2 = document.createElement("span");
+                    appdom2.innerHTML="*密码不能为空";
+                    appdom2.style.color="red";
+                    document.getElementById("pwd").appendChild(appdom2);
+                }
+                return false;
+            }else{
+                var findNodes2 = document.getElementById("pwd").children;
+                if(findNodes2.length>0){
+                    document.getElementById("pwd").removeChild(findNodes2[0]);
+                }
+            }
+			
+			//alert(username.value+","+userpwd.value);
+			window.location.href = "http://www.baidu.com";
+			 //window.open("http://www.baidu.com");
+        }
+    </script>
+</head>
+<body>
+     <form name="form1">
+         用户名：<input type="text" name="username" id="username"/><em id="name"></em><br>
+         密  码：<input type="password" name="userpwd" id="userpwd"><em id="pwd"></em><br>
+         <input type="submit" value="登录" onclick="return check();">
+     </form>
+
+
+</body>
+</html>
