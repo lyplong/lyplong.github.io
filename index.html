@@ -38,10 +38,14 @@
                     document.getElementById("pwd").removeChild(findNodes2[0]);
                 }
             }
-			
-			//alert(username.value+","+userpwd.value);
-			//window.location.href = "http://www.baidu.com";
+		
+		if(username.value=="mission"&&userpwd.value=="mission"){
 			window.open("taskState.html");
+		}else{
+			alert("用户名密码错误");
+		}
+			
+			
         }
     </script>
 </head>
