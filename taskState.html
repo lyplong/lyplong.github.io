@@ -1,0 +1,205 @@
+<html>
+<head></head>
+<body>
+
+<table border=1 cellspacing=0>
+<tr style="background-color:#ADADAD">
+	<th style="width:80px">城市</th> 
+	<th>线路</th> 
+	<th>类别</th>
+	<th>负责人</th>
+	<th>状态</th>
+	<th>目前进度</th>
+	<th>对方厂家</th>
+	<th>开始时间</th>
+	<th>结束时间</th>
+	<th>说明</th>
+</tr>
+
+<!--上海-->
+<tr style="background-color:red">
+	<th style="background-color:white" rowspan=4>上海</th>
+	<th rowspan=2>2号线东延线</th> 
+	<td>ATS接口</td>
+	<td style="text-align:center">李辉</td>
+	<td style="text-align:center">开发</td>
+	<td style="text-align:center">0%</td>
+	<td style="text-align:center">PA</td>
+	<td style="text-align:center">2018-8-20</td>
+	<td style="text-align:center">2018-9-31</td>
+	<td style="text-align:left">抓取网卡数据给高架站发送ATS,并在LED上显示出来</td>
+</tr>
+<tr style="background-color:red">
+	<td>首末班时间</td>
+	<td style="text-align:center">魏健</td>
+	<td style="text-align:center">开发</td>
+	<td style="text-align:center">0%</td>
+	<td style="text-align:center">MIT</td>
+	<td style="text-align:center">2018-8-20</td>
+	<td style="text-align:center">2018-9-31</td>
+	<td style="text-align:left">
+		1.在工作站上放一个带界面的软件，用于编辑首末班时间及下发<br>
+		2.在每台播控上放一个软件用于接收平台下发的首末班时间并更改播控软件首末班配置
+	</td>
+</tr>
+<tr style="background-color:red">
+	<th>松江有轨电车</th> 
+	<td>ATS接口</td>
+	<td style="text-align:center">蔡诚</td>
+	<td style="text-align:center">开发</td>
+	<td style="text-align:center">10%</td>
+	<td style="text-align:center">信号</td>
+	<td style="text-align:center">2018-8-16</td>
+	<td style="text-align:center">2018-8-24</td>
+	<td style="text-align:left">WebService获取信号并下发</td>
+</tr>
+<tr style="background-color:#FF9797">
+	<th>5号线</th> 
+	<td>SIOS接口</td>
+	<td style="text-align:center">蔡诚</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">ISCS</td>
+	<td style="text-align:center">2018-4-23</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:left">协议已定,开发完成(2018-4-23),待测试</td>
+</tr>
+
+<!--武汉-->
+<tr style="background-color:#FF9797">
+	<th style="background-color:#FFFFFF" rowspan=3>武汉</th>
+	<th rowspan=2>8号线</th> 
+	<td>显示设备历史状态</td>
+	<td style="text-align:center">皮叶伟</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">MIT</td>
+	<td style="text-align:center">2018-8-6</td>
+	<td style="text-align:center">2018-8-20</td>
+	<td style="text-align:left">工作站上：获取Nagios状态,有变化存储,查看历史状态</td>
+</tr>
+<tr style="background-color:#FF9797">
+	<td>烽火云平台</td>
+	<td style="text-align:center">蔡诚</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">MIT</td>
+	<td style="text-align:center">2018-8-13</td>
+	<td style="text-align:center">2018-8-17</td>
+	<td style="text-align:left">
+		武汉PIS集成烽火云平台，ISCS转发消息至PIS(中心级和车站级)<br>
+		１.使用Netty作为服务端接收ISCS消息<br>
+		２.使用Netty作为客户端转发ISCS消息
+	</td>
+</tr>
+<tr style="background-color:red">
+	<th>3号线</th> 
+	<td>LED</td>
+	<td style="text-align:center">郭朋勇</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">0%</td>
+	<td style="text-align:center">MIT</td>
+	<td style="text-align:center">2018-8-20</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:left">
+		1.范湖站ATS进站时间滞后的问题，我拷取了LED播控日志给郭鹏勇，请帮忙解决！<br>
+		2.目前3号线全线LED换上了利亚德新板卡，出现了版式中 年/月/日 不能向左边靠齐。已确定新板卡版本号和武汉8号线，2号线北延一致。
+	</td>
+</tr>
+
+<!--重庆-->
+<tr style="background-color:#FF9797">
+	<th style="background-color:#FFFFFF" rowspan=3>重庆</th>
+	<th>重庆PCC</th> 
+	<td>PCC</td>
+	<td style="text-align:center">蔡诚</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">经纬、冠华</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center">2018-8-31</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:#FF9797">
+	<th>重庆环线</th> 
+	<td>ISCS</td>
+	<td style="text-align:center">刘飞</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">MIT</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center">2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:#FF9797">
+	<th>重庆4号线</th> 
+	<td>TISCS</td>
+	<td style="text-align:center">刘飞</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">MIT</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center">2018-9-30</td>
+	<td style="text-align:left"></td>
+</tr>
+
+<!--天津-->
+<tr style="background-color:#FF9797">
+	<th style="background-color:#FFFFFF">天津</th>
+	<th>2.3号线PCC</th> 
+	<td>PCC</td>
+	<td style="text-align:center">刘飞</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">80%</td>
+	<td style="text-align:center">PCC</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center">2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+
+<!--杭州-->
+<tr style="background-color:#FF9797">
+	<th style="background-color:#FFFFFF">杭州</th>
+	<th>2号线</th> 
+	<td>车辆拥挤度</td>
+	<td style="text-align:center">刘飞</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">70%</td>
+	<td style="text-align:center">华启</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center"></td>
+	<td style="text-align:left"></td>
+</tr>
+
+<!--无锡-->
+<tr style="background-color:#FF9797">
+	<th style="background-color:#FFFFFF">无锡</th>
+	<th>1号线</th> 
+	<td>ISCS</td>
+	<td style="text-align:center">刘飞</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">90%</td>
+	<td style="text-align:center">ISCS</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center"></td>
+	<td style="text-align:left"></td>
+</tr>
+
+<!--广州-->
+<tr style="background-color:#FF9797">
+	<th style="background-color:#FFFFFF">广州</th>
+	<th>7,9号线</th> 
+	<td>ISCS</td>
+	<td style="text-align:center">刘飞</td>
+	<td style="text-align:center">测试</td>
+	<td style="text-align:center">80%</td>
+	<td style="text-align:center">ISCS</td>
+	<td style="text-align:center"></td>
+	<td style="text-align:center">2018-9-30</td>
+	<td style="text-align:left"></td>
+</tr>
+
+</table>
+
+</body>
+</html>
