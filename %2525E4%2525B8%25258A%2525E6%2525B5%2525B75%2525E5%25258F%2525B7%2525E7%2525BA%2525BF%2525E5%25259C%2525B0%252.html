@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <link id="easyuiTheme" rel="stylesheet" type="text/css" href="js/themes/default/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="js/themes/icon.css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="js/lypUtil.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var theme = lyp.getCookie("easyuiTheme");
+            if(theme)
+            {
+                lyp.changeTheme(theme);
+            }
+
+            mainTabs = $('#mainTabs').tabs({
+                fit : true,
+                border : false,
+                tools : [{
+                    text : '关闭',
+                    iconCls : 'ext-icon-cross',
+                    handler : function() {
+                        var index = mainTabs.tabs('getTabIndex', mainTabs.tabs('getSelected'));
+                        var tab = mainTabs.tabs('getTab', index);
+                        if (tab.panel('options').closable) {
+                            mainTabs.tabs('close', index);
+                        } else {
+                            $.messager.alert('提示', '[' + tab.panel('options').title + ']不可以被关闭！', 'error');
+                        }
+                    }
+                } ]
+            });
+
+            infs = function(node)
+            {
+                var tabs = $('#mainTabs');
+                var opts = {
+                    title : '接口',
+                    closable : true,
+                    content : lyp.formatString('<iframe src="{0}" allowTransparency="true" style="border:1px;width:100%;height:100%;" frameBorder="0"></iframe>', "interface.html"),
+                    border : false,
+                    fit : true
+                };
+                if (tabs.tabs('exists', opts.title)) {
+                    tabs.tabs('select', opts.title);
+                } else {
+                    tabs.tabs('add', opts);
+                }
+            }
+			 pis = function(node)
+            {
+                var tabs = $('#mainTabs');
+                var opts = {
+                    title : '平台',
+                    closable : true,
+                    content : lyp.formatString('<iframe src="{0}" allowTransparency="true" style="border:1px;width:100%;height:100%;" frameBorder="0"></iframe>', "pis.htm"),
+                    border : false,
+                    fit : true
+                };
+                if (tabs.tabs('exists', opts.title)) {
+                    tabs.tabs('select', opts.title);
+                } else {
+                    tabs.tabs('add', opts);
+                }
+            }
+			 cctv = function(node)
+            {
+                var tabs = $('#mainTabs');
+                var opts = {
+                    title : 'CCTV',
+                    closable : true,
+                    content : lyp.formatString('<iframe src="{0}" allowTransparency="true" style="border:1px;width:100%;height:100%;" frameBorder="0"></iframe>', "cctv.htm"),
+                    border : false,
+                    fit : true
+                };
+                if (tabs.tabs('exists', opts.title)) {
+                    tabs.tabs('select', opts.title);
+                } else {
+                    tabs.tabs('add', opts);
+                }
+            }
+			
+			infs();
+        });
+
+    </script>
+</head>
+<body id="cc" class="easyui-layout">
+<div data-options="region:'south'" style="height:20px;"></div>
+<div data-options="region:'west',title:'选项'" style="width:150px;">
+    <ul style="cursor:pointer">
+        <li onclick="infs(this)">接口</li>
+		<li onclick="pis(this)">平台</li>
+		<li onclick="cctv(this)">CCTV</li>
+    </ul>
+</div>
+<div data-options="region:'center',title:''" style="overflow:hidden">
+    <div id="mainTabs"></div>
+</div>
+</body>
+</html>
