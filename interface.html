@@ -1,0 +1,460 @@
+<html>
+<head></head>
+<body style="font-size:10px">
+
+<table border=1 cellspacing=0 style="text-align:center">
+<tr style="background-color:#ADADAD">
+	<th style="width:80px">城市</th> 
+	<th>线路</th> 
+	<th>类别</th>
+	<th>负责人</th>
+	<th>状态</th>
+	<th>目前进度</th>
+	<th>对方厂家</th>
+	<th>开始时间</th>
+	<th>结束时间</th>
+	<th>说明</th>
+</tr>
+
+<!--上海-->
+<tr style="text-decoration:line-through;">
+	<th style="background-color:white" rowspan=6>上海</th>
+	<th rowspan=2>2号线东延线</th> 
+	<td>ATS接口</td>
+	<td>李辉</td>
+	<td>开发</td>
+	<td>0%</td>
+	<td>PA</td>
+	<td>2018-8-20</td>
+	<td>2018-9-31</td>
+	<td style="text-align:left">抓取网卡数据给高架站发送ATS,并在LED上显示出来</td>
+</tr>
+<tr style="text-decoration:line-through;">
+	<td>首末班时间</td>
+	<td>魏健</td>
+	<td>开发</td>
+	<td>0%</td>
+	<td>MIT</td>
+	<td>2018-8-20</td>
+	<td>2018-9-31</td>
+	<td style="text-align:left">
+		1.在工作站上放一个带界面的软件，用于编辑首末班时间及下发<br>
+		2.在每台播控上放一个软件用于接收平台下发的首末班时间并更改播控软件首末班配置
+	</td>
+</tr>
+<tr style="background-color:red">
+	<th>松江有轨电车</th> 
+	<td>ATS接口</td>
+	<td>蔡诚</td>
+	<td>开发</td>
+	<td>10%</td>
+	<td>信号</td>
+	<td>2018-8-16</td>
+	<td>2018-8-24</td>
+	<td style="text-align:left">
+		1. WebService获取信号并下发<br>
+		2. 2018.8.20蔡诚回复协议有问题，泰雷滋回复需老外回复协议问题
+	</td>
+</tr>
+<tr style="background-color:#FF9797">
+	<th style="background-color:white" rowspan=3>5号线</th>
+	<td>SIOS接口</td>
+	<td>蔡诚</td>
+	<td>测试</td>
+	<td>70%</td>
+	<td>ISCS</td>
+	<td>2018-4-23</td>
+	<td></td>
+	<td style="text-align:left">协议已定,开发完成(2018-4-23),待测试</td>
+</tr>
+<tr style="background-color:red">
+	<td>ATS</td>
+	<td>蔡诚</td>
+	<td>开发</td>
+	<td>70%</td>
+	<td>集中告警</td>
+	<td>2018-3-12</td>
+	<td></td>
+	<td style="text-align:left">
+		1.2018.3.12收到协议文档<br>
+		2.2018.8.22李辉参加上海接口会议: 老线改造（信号方换成泰雷兹）<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;a) 每站增加上下行播控和LED<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;b) Ｙ型路线：　莘庄->闵行开发区　莘庄->奉贤开发区　中间由东川路分隔<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;c) 在10.20日前,莘庄->奉贤开发区的车在东川路清客，因此莘庄开往奉贤开发区的车在莘庄->东川路中间所有站LED的开往方向显示成东川路<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;d) 在10.20日后，所有站的LED开往方向根据信号的来显示<br>
+		3.2018.8.22章胤卿电话：下周二8.28日需给个接口程序至现场测试(泰雷兹核心技术在老外手里，其它时间不配合)<br>
+		4.2018.8.28蔡诚将接口包及安装说明发给现场<br>
+	</td>
+</tr>
+<tr style="background-color:red">
+	<td>集中告警</td>
+	<td>蔡诚</td>
+	<td>开发</td>
+	<td>50%</td>
+	<td>集中告警</td>
+	<td>2018-6-22</td>
+	<td></td>
+	<td style="text-align:left">
+		1.2018.6.22收到协议文档<br>
+	</td>
+</tr>
+
+<!--武汉-->
+<tr style="background-color:#98FB98">
+	<th style="background-color:#FFFFFF" rowspan=3>武汉</th>
+	<th rowspan=2>8号线</th> 
+	<td>历史状态</td>
+	<td>皮叶伟</td>
+	<td>测试</td>
+	<td>90%</td>
+	<td>MIT</td>
+	<td>2018-8-6</td>
+	<td>2018-8-20</td>
+	<td style="text-align:left">工作站上：获取Nagios状态,有变化存储,查看历史状态</td>
+</tr>
+<tr style="background-color:#98FB98">
+	<td>烽火云平台</td>
+	<td>蔡诚</td>
+	<td>测试</td>
+	<td>90%</td>
+	<td>MIT</td>
+	<td>2018-8-13</td>
+	<td>2018-8-17</td>
+	<td style="text-align:left">
+		武汉PIS集成烽火云平台，ISCS转发消息至PIS(中心级和车站级)<br>
+		１.使用Netty作为服务端接收ISCS消息<br>
+		２.使用Netty作为客户端转发ISCS消息
+	</td>
+</tr>
+<tr style="text-decoration:line-through;">
+	<th>3号线</th> 
+	<td>LED</td>
+	<td>郭朋勇</td>
+	<td>测试</td>
+	<td>0%</td>
+	<td>MIT</td>
+	<td>2018-8-20</td>
+	<td></td>
+	<td style="text-align:left">
+		1.范湖站ATS进站时间滞后的问题，我拷取了LED播控日志给郭鹏勇，请帮忙解决！<br>
+		2.目前3号线全线LED换上了利亚德新板卡，出现了版式中 年/月/日 不能向左边靠齐。已确定新板卡版本号和武汉8号线，2号线北延一致。
+	</td>
+</tr>
+
+<!--重庆-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF" rowspan=3>重庆</th>
+	<th>重庆PCC</th> 
+	<td>PCC</td>
+	<td>蔡诚</td>
+	<td>测试</td>
+	<td>70%</td>
+	<td>经纬、冠华</td>
+	<td></td>
+	<td>2018-8-31</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:#FF9797;">
+	<th>重庆环线</th> 
+	<td>ISCS</td>
+	<td>刘飞</td>
+	<td>测试</td>
+	<td>70%</td>
+	<td>ISCS</td>
+	<td></td>
+	<td>2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:#FF9797;">
+	<th>重庆4号线</th> 
+	<td>TISCS</td>
+	<td>刘飞</td>
+	<td>测试</td>
+	<td>70%</td>
+	<td>TISCS</td>
+	<td></td>
+	<td>2018-9-30</td>
+	<td style="text-align:left"></td>
+</tr>
+
+<!--天津-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF" rowspan=3>天津</th>
+	<th rowspan=2>2.3号线</th> 
+	<td>PCC</td>
+	<td>刘飞</td>
+	<td>测试</td>
+	<td>80%</td>
+	<td>PCC</td>
+	<td></td>
+	<td>2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:red;">
+	<td>老平台</td>
+	<td>徐云龙</td>
+	<td>开发</td>
+	<td>0%</td>
+	<td>MIT</td>
+	<td></td>
+	<td>2018-8-31</td>
+	<td style="text-align:left">天津２，３号线老平台添加mac验证</td>
+</tr>
+<tr style="background-color:#98FB98;">
+	<td>1号线东延线</td>
+	<td>ATS接口</td>
+	<td>蔡诚</td>
+	<td>测试</td>
+	<td>100%</td>
+	<td>MIT</td>
+	<td>2018-8-29</td>
+	<td>2018-8-29</td>
+	<td style="text-align:left">
+		1. 8.29 9:20<br>
+		  天津1号线东延ATS接口刚进行完测试，信号系统进行了软件升级<br>
+		  8月29日0点39分，收到双桥河列车到达时间，显示16分到达，但信号那边解释说并未给该站发送到达时间信息，日志中确实有时间数据<br>
+		2. 8.29 21:57<br>
+		  ATS接口正常了，目前运行的两个站时间可以正常显示
+	</td>
+</tr>
+
+
+<!--杭州-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF" rowspan=2>杭州</th>
+	<th>2号线</th> 
+	<td>车辆拥挤度</td>
+	<td>刘飞</td>
+	<td>测试</td>
+	<td>70%</td>
+	<td>华启</td>
+	<td></td>
+	<td></td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:#FF9797;">
+	<td>杭临线</td>
+	<td>ISCS</td>
+	<td>刘飞</td>
+	<td>开发</td>
+	<td>0%</td>
+	<td>青华同方</td>
+	<td>2018-8-24</td>
+	<td></td>
+	<td style="text-align:left">
+		1. 8.24接到张兴吉协议，给出测试时间及联系人(同方骆顶全:18625041005):<br>
+			协议测试:    2018年10月　地点：同方杭州地铁项目部<br>
+			点对点测试:  2018年11月　地点：同方杭州地铁项目部<br>
+			平台模拟测试: 2018年11月　地点：同方杭州地铁项目部<br>
+		2. 8.25日，刘飞确认协议（ 协议没什么大问题，在设备状态上传这块可能需要一点小改动，这点已经和对方骆工沟通，在协议测试的时候会重新签订）<br>
+	</td>
+</tr>
+
+<!--无锡-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF" rowspan=2>无锡</th>
+	<th>1号线</th> 
+	<td>ISCS</td>
+	<td>刘飞</td>
+	<td>测试</td>
+	<td>90%</td>
+	<td>ISCS</td>
+	<td></td>
+	<td></td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:#FF9797;">
+	<th>3号线</th> 
+	<td>ATS</td>
+	<td>蔡诚</td>
+	<td>协议确认</td>
+	<td>0%</td>
+	<td>泰雷兹</td>
+	<td></td>
+	<td></td>
+	<td style="text-align:left">
+		1. 2018.8.29收到协议<br>
+	</td>
+</tr>
+
+<!--广州-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF">广州</th>
+	<th>7,9号线</th> 
+	<td>ISCS</td>
+	<td>刘飞</td>
+	<td>测试</td>
+	<td>80%</td>
+	<td>ISCS</td>
+	<td></td>
+	<td>2018-9-30</td>
+	<td style="text-align:left"></td>
+</tr>
+
+<!--青岛-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF" rowspan=6>青岛</th>
+	<th>PCC接口</th> 
+	<td>PCC</td>
+	<td>徐云龙</td>
+	<td>开发</td>
+	<td>80%</td>
+	<td>海信</td>
+	<td>2018-6-7</td>
+	<td>2018-9-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:red;">
+	<th rowspan=3>13号线接口</th> 
+	<td>ATS</td>
+	<td>刘飞</td>
+	<td>开发</td>
+	<td>70%</td>
+	<td>海信</td>
+	<td>2018-8-21</td>
+	<td>2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:red;">
+	<td>ISCS</td>
+	<td>刘飞</td>
+	<td>开发</td>
+	<td>70%</td>
+	<td>MIT</td>
+	<td>2018-8-21</td>
+	<td>2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:red;">
+	<td>集中告警</td>
+	<td>刘飞</td>
+	<td>开发</td>
+	<td>70%</td>
+	<td>MIT</td>
+	<td>2018-8-21</td>
+	<td>2018-8-30</td>
+	<td style="text-align:left"></td>
+</tr>
+<tr style="background-color:red;">
+	<th>1号线电子导引</th> 
+	<td>IPIS</td>
+	<td>徐云龙</td>
+	<td>需求整理</td>
+	<td>10%</td>
+	<td>海信、车站级ISCS</td>
+	<td>2018-8-21</td>
+	<td>2018-8-24</td>
+	<td style="text-align:left">
+		一. 2018.8.23日于杰，余佳佳，魏健，徐云龙微信群语音沟通<br>
+		1. 2019年9,10月完工<br>
+		2. 三联屏中间的屏触摸，二联屏左边的屏触摸<br>
+		3. 和1号线海信的PIS有接口(ATS,紧急信息,普通信息,直播,实时告警信息,历史告警信息)<br>
+	</td>
+</tr>
+<tr style="background-color:#FF9797;text-decoration:line-through;">
+	<th>13号线电子导引</th> 
+	<td>IPIS</td>
+	<td>魏健</td>
+	<td>开发</td>
+	<td>20%</td>
+	<td>MIT</td>
+	<td>2018-8-21</td>
+	<td>2018-10-30</td>
+	<td style="text-align:left">
+		一. 2018.8.23日于杰，余佳佳，魏健，徐云龙微信群语音沟通<br>
+		1. 青岛13号线年底开通，电子导引系统在10月底出一版<br>
+        2. 所有设备均不带触摸。厂家工控机系统预装win7, 软件在win7上运行<br>
+        3. 软件暂时播放本地视频，后期有直播要求再增加　<br>
+        4. 青岛13号线PIS是我们的，电子导引从PIS下发命令。目前无接口要求，后期增加可内部完成<br>
+		5. 请于杰联系采购在9月初将设备（三联屏的工控机及屏）寄往南京供测试<br>
+		6. 请魏健出一个设计供现场确认，确认后动工  <br>
+	</td>
+</tr>
+
+<!--深圳-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF" rowspan=2>深圳</th>
+	<th>机场线</th> 
+	<td>ATS</td>
+	<td>蔡诚</td>
+	<td>开发</td>
+	<td>20%</td>
+	<td>庞巴迪</td>
+	<td>2018-8-9</td>
+	<td></td>
+	<td style="text-align:left">
+		1. 2018.8.9日碰头会<br>
+		2. 2018.8.17确定协议及点表<br>
+	</td>
+</tr>
+<tr style="background-color:FF9797;">
+	<th>ISCS</th> 
+	<td>ISCS</td>
+	<td>皮叶伟</td>
+	<td>开发</td>
+	<td>20%</td>
+	<td>庞巴迪</td>
+	<td>2018-8-9</td>
+	<td></td>
+	<td style="text-align:left">
+		1. 2018.8.9日碰头会<br>
+		2. 2018.8.17确定协议及点表<br>
+	</td>
+</tr>
+
+
+
+<!--四川-->
+<tr style="background-color:#98FB98;">
+	<th style="background-color:#FFFFFF">四川</th>
+	<th>广安线</th> 
+	<td>干结点</td>
+	<td>蔡诚</td>
+	<td>测试</td>
+	<td>80%</td>
+	<td>车控室</td>
+	<td>2018-6-9</td>
+	<td></td>
+	<td style="text-align:left">
+		车控室拉两根电线，接通后程序往全区域播控发送配置的文本信息（郭朋勇和蔡诚商量下发信息的优先级改为80）<br>
+		2018-7-11软件开发完毕，硬件及程序给到樊真福。
+	</td>
+</tr>
+
+<!--南宁-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF">南宁</th>
+	<th>3号线</th> 
+	<td>PCC</td>
+	<td>徐云龙</td>
+	<td>协议确认</td>
+	<td>0%</td>
+	<td>冠华</td>
+	<td>2018-5-18</td>
+	<td></td>
+	<td style="text-align:left">
+		1. 2018.5.18收到协议<br>
+		2. 2018.5.21徐云龙将协议批注并回复（协议接入方式无问题，协议不完整，细节需沟通）<br>
+		3. 2018.8.22李英泉将冠华修改后的协议发过来，需要再次评审<br>
+	</td>
+</tr>
+<!--宁波-->
+<tr style="background-color:#FF9797;">
+	<th style="background-color:#FFFFFF">宁波</th>
+	<th>4号线</th> 
+	<td>ATS</td>
+	<td>刘飞</td>
+	<td>开发</td>
+	<td>20%</td>
+	<td>交控</td>
+	<td>2018-8-28</td>
+	<td></td>
+	<td style="text-align:left">
+		1. 2018.8.28收到协议，但是串口的，和对方沟通需要改为网口<br>
+		2. 2018.8.28收到网口的协议，刘飞确认没问题<br>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>
